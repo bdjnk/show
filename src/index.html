@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Presentation</title>
+    <style>
+			html {
+  			box-sizing: border-box;
+				height: 100vh
+			}
+			*, *:before, *:after {
+			  box-sizing: inherit;
+			}
+      body {
+			  display: flex;
+  			flex-direction: column;
+  			justify-content: center;
+				font-family: manrope;
+				font-size: 4rem;
+				margin: 0;
+				padding: 10vw;
+				height: 100vh;
+			}
+			#primary {
+				margin-top: -3lh;
+				flex-basis: 3lh;
+		    display: flex;
+		    justify-content: end;
+		    flex-direction: column;
+			}
+			#secondary {
+				font-size: 2rem;
+				font-family: manrope-medium;
+				color: lightgray;
+				margin-left: 2rem;
+			}
+    </style>
+  </head>
+
+  <body>
+    <div id="primary"></div>
+    <div id="secondary"></div>
+  </body>
+	<script src="/webui.js"></script>
+  <script>
+		function setContent(content) {
+			[primary, secondary = "\u00A0"] = content.split(" _ ");
+			document.getElementById("primary").textContent = primary;
+			document.getElementById("secondary").textContent = secondary;
+		}
+		document.addEventListener('keyup', event => {
+			if ([' ', 'ArrowRight'].includes(event.key))
+			{
+				webui_fn('next', '');
+			}
+			if (['ArrowLeft'].includes(event.key))
+			{
+				webui_fn('prev', '')
+			}
+		});
+  </script>
+</html>
