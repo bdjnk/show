@@ -43,6 +43,6 @@ window.bind("prev") do (e: Event):
   setContent()
 
 window.rootFolder = currentSourcePath().parentDir()
-window.show("index.html", Browsers.Chromium)
+window.show("index.html")
 
 wait()
