@@ -1,0 +1,32 @@
+html {
+  box-sizing: border-box;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+  height: 100vh;
+  margin: 0;
+  padding: 0 8vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#content {
+  flex-basis: 18rlh;
+  max-width: 70rem;
+}
+#primary {
+  font-size: 4rem;
+  line-height: 1.2;
+}
+#secondary {
+  margin-left: 2rem;
+  margin-top: 1rlh;
+  font-size: 2rem;
+  color: lightgray;
+}
